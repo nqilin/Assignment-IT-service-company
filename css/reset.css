@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -27,30 +28,19 @@ button {
 
 /* 2. Global CSS variables, color system */
 :root {
-  /* Header & hero background */
   --primary: #1f335c;
   --primary-light: #30477a;
   --primary-dark: #142240;
-
-  /* Buttons, popups, dropdown panels */
   --secondary: #ffffff;
   --accent: #00a8ff;
-
-  /* Text color palette */
   --text-dark: #1a1a1a;
   --text-normal: #444444;
   --text-light: #707b94;
   --text-white: #ffffff;
-
-  /* Background layers */
   --bg-white: #ffffff;
   --bg-gray: #f6f8fc;
   --bg-dark: #17284a;
-
-  /* Border & divider for dropdown, card frames */
   --border-color: #e2e7f2;
-
-  /* Global layout constants for unified spacing & corners */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 16px;
@@ -65,15 +55,20 @@ body {
   line-height: 1.65;
 }
 
-h1, h2, h3, h4 {
-  color: var(--text-white);
+h1,
+h2,
+h3,
+h4 {
   font-weight: 600;
 }
 
 /* Dark background page headings override */
-.section-dark h1, .section-dark h2 {
+.section-dark h1,
+.section-dark h2 {
   color: var(--text-white);
 }
-.section-light h1, .section-light h2 {
+
+.section-light h1,
+.section-light h2 {
   color: var(--primary);
 }
