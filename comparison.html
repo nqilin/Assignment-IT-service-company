@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAQSU Comparison – ERP Software</title>
+    <!-- External reset.css -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <style>
+        /* ============================================================
+           Comparison Styles
+           ============================================================ */
+        /* ---------- Comparison Table ---------- */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 12px;
+        }
+        .comparison-col {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+            transition: transform 0.25s, box-shadow 0.3s;
+        }
+        .comparison-col:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+        .comparison-col h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+        .comparison-col.maqsu h3 {
+            color: var(--primary);
+        }
+        .comparison-col.other h3 {
+            color: var(--text-light);
+        }
+        .comparison-col ul {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .comparison-col ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-normal);
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .comparison-col ul li:last-child {
+            border-bottom: none;
+        }
+        .comparison-col .icon {
+            font-size: 20px;
+            min-width: 28px;
+            text-align: center;
+            margin-top: 2px;
+        }
+        .comparison-col.maqsu .icon {
+            color: var(--success-green);
+        }
+        .comparison-col.other .icon {
+            color: var(--danger-red);
+        }
+        .comparison-col.other ul li {
+            color: var(--text-light);
+        }
+
+        /* responsive */
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .comparison-col {
+                padding: 28px 20px;
+            }
+            .comparison-col h3 {
+                font-size: 24px;
+            }
+        }
+
+        
+
+        /* ============================================================
+           5. Responsive
+           ============================================================ */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                gap: 14px;
+            }
+            .navbar .nav-links {
+                justify-content: center;
+                gap: 16px;
+            }
+            .navbar .nav-links a {
+                font-size: 14px;
+            }
+            .hero {
+                padding: 56px 0 72px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 17px;
+            }
+            .section {
+                padding: 48px 0;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+            .footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+            .navbar .nav-links a {
+                font-size: 13px;
+            }
+            .navbar .btn-demo {
+                padding: 6px 16px;
+                font-size: 13px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .comparison-col ul li {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+    NAVIGATION
+    ============================================================ -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">MAQ<span>SU</span></a>
+            <nav class="nav-links">
+                <a href="./Product.html">PRODUCTS</a>
+                <a href="./about.html">ABOUT</a>
+                <a href="./partnership.html">PARTNERSHIP</a>
+                <a href="./support.html">SUPPORT</a>
+                <a href="./comparison.html">COMPARISON</a>
+                <a href="#" class="btn-demo">BOOK DEMO</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    HERO
+    ============================================================ -->
+    <section class="hero">
+        <div class="container">
+            <h1>General <span class="highlight">Comparison</span></h1>
+            <p>
+                Here are points of difference between MAQSU ERP Software and other ERP systems
+                based on functions and benefits.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    COMPARISON TABLE
+    ============================================================ -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">MAQSU vs. Other ERP</h2>
+            <p class="section-sub">
+                See why MAQSU stands out with tailored features for Cambodian SMEs.
+            </p>
+
+            <div class="comparison-grid">
+                <!-- MAQSU Column -->
+                <div class="comparison-col maqsu">
+                    <h3>MAQSU</h3>
+                    <ul>
+                        <li><span class="icon">✔</span> Easy to use for accountants in Cambodia</li>
+                        <li><span class="icon">✔</span> Available both online and offline</li>
+                        <li><span class="icon">✔</span> Supports monthly tax declaration via e-Filing</li>
+                        <li><span class="icon">✔</span> Includes TOI annual tax return functionality</li>
+                        <li><span class="icon">✔</span> Provides CIFRS‑compliant financial statements for SMEs</li>
+                        <li><span class="icon">✔</span> Scalable inventory management for small to large businesses</li>
+                        <li><span class="icon">✔</span> Additional modules: POS, Manufacturing, CRM, and HRM</li>
+                    </ul>
+                </div>
+
+                <!-- Other ERP Column -->
+                <div class="comparison-col other">
+                    <h3>Other ERP System</h3>
+                    <ul>
+                        <li><span class="icon">✘</span> Difficult for accountants in Cambodia to use</li>
+                        <li><span class="icon">✘</span> Can only be used offline; online not available</li>
+                        <li><span class="icon">✘</span> Does not support tax filing</li>
+                        <li><span class="icon">✘</span> Does not support TOI tax declaration</li>
+                        <li><span class="icon">✘</span> Does not contain CIFRS financial statements for SMEs</li>
+                        <li><span class="icon">✘</span> Inventory management is limited to small‑scale operations</li>
+                        <li><span class="icon">✘</span> Lacks localization features such as language support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="copy">
+                &copy; 2026 <strong>MAQSU</strong>, All Rights Reserved
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">SLA</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

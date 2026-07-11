@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAQSU Partnership Program</title>
+    <!-- reset.css -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <style>
+        /* ============================================================
+        Partnership style
+        ============================================================ */
+        /* ---------- benefits ---------- */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+            margin-top: 12px;
+        }
+        .benefit-item {
+            background: var(--bg-white);
+            padding: 36px 24px;
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.25s, box-shadow 0.3s;
+            border: 1px solid var(--border-color);
+        }
+        .benefit-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+        .benefit-item .icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .benefit-item h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+        .benefit-item p {
+            font-size: 15px;
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* ---------- partnership form ---------- */
+        .partnership-form-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .partnership-info h3 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        .partnership-info p {
+            font-size: 16px;
+            color: var(--text-normal);
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+        .partnership-info .icon-list {
+            margin-top: 24px;
+        }
+        .partnership-info .icon-list li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+            font-size: 16px;
+            color: var(--text-normal);
+        }
+        .partnership-info .icon-list li .icon {
+            font-size: 24px;
+            width: 32px;
+            text-align: center;
+            color: var(--accent);
+        }
+
+        .inquiry-form h3 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--text-normal);
+            margin-bottom: 4px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-size: 15px;
+            font-family: inherit;
+            background: var(--bg-white);
+            transition: border-color 0.2s;
+            color: var(--text-normal);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.12);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+        .form-captcha {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--bg-gray);
+            padding: 10px 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--text-normal);
+        }
+        .form-captcha input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--accent);
+            margin: 0;
+        }
+        .btn-submit {
+            background-color: var(--primary);
+            color: var(--text-white);
+            padding: 14px 44px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.25s, transform 0.15s;
+            margin-top: 6px;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        /* ============================================================
+           5. responsive
+           ============================================================ */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .partnership-form-wrap {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                gap: 14px;
+            }
+            .navbar .nav-links {
+                justify-content: center;
+                gap: 16px;
+            }
+            .navbar .nav-links a {
+                font-size: 14px;
+            }
+            .hero {
+                padding: 56px 0 72px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 17px;
+            }
+            .section {
+                padding: 48px 0;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+            .benefits-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 18px;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .navbar .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+            .navbar .nav-links a {
+                font-size: 13px;
+            }
+            .navbar .btn-demo {
+                padding: 6px 16px;
+                font-size: 13px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .partnership-info p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+    nav-bar
+    ============================================================ -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">MAQ<span>SU</span></a>
+            <nav class="nav-links">
+                <a href="./Product.html">PRODUCTS</a>
+                <a href="./about.html">ABOUT</a>
+                <a href="./partnership.html">PARTNERSHIP</a>
+                <a href="./support.html">SUPPORT</a>
+                <a href="./comparison.html">COMPARISON</a>
+                <a href="#" class="btn-demo">BOOK DEMO</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    Hero
+    ============================================================ -->
+    <section class="hero">
+        <div class="container">
+            <h1>MAQSU <span class="highlight">Partnership</span> Network</h1>
+            <p>
+                Do you want to earn extra income and expand your business network?
+                Join the MAQSU Partnership Program and grow with us.
+            </p>
+            <a href="#partner-form" class="btn-hero">Become a Partner</a>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    partnership benefits
+    ============================================================ -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">MAQSU PARTNERSHIP PROGRAM BENEFITS</h2>
+            <p class="section-sub">
+                Whether you are a business owner, a manager, or an employee, you can join this program and enjoy the benefits!
+            </p>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="icon">🤝</span>
+                    <h4>Meet Clients’ Requirements</h4>
+                    <p>Deliver tailored solutions that perfectly align with your clients' business needs.</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="icon">🌐</span>
+                    <h4>Expand Business Networks</h4>
+                    <p>Open more opportunities and connect with industry leaders across Cambodia.</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="icon">📦</span>
+                    <h4>Add Solutions to Portfolio</h4>
+                    <p>Enhance your service offering by integrating MAQSU's cutting-edge ERP solutions.</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="icon">🏆</span>
+                    <h4>Gain Recognition</h4>
+                    <p>Earn recognition as a trusted partner in the MAQSU ecosystem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    partnership form
+    ============================================================ -->
+    <section class="section section-gray" id="partner-form">
+        <div class="container">
+            <h2 class="section-title">MAQSU ERP Partnership Network</h2>
+            <p class="section-sub">Fill out the form below to start your journey with us.</p>
+
+            <div class="partnership-form-wrap">
+                <!-- left -->
+                <div class="partnership-info">
+                    <h3>Why Partner With MAQSU?</h3>
+                    <p>
+                        Joining the MAQSU Partnership Network means more than just adding a product to your portfolio.
+                        It's about building a sustainable business relationship that drives mutual growth.
+                    </p>
+                    <ul class="icon-list">
+                        <li><span class="icon">✔️</span> Competitive referral commissions</li>
+                        <li><span class="icon">✔️</span> Dedicated partner support team</li>
+                        <li><span class="icon">✔️</span> Co-marketing opportunities</li>
+                        <li><span class="icon">✔️</span> Access to exclusive resources</li>
+                    </ul>
+                </div>
+
+                <!-- right form -->
+                <div class="inquiry-form">
+                    <h3>Partner Application</h3>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" id="fullname" placeholder="Your full name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+855 12 345 678" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Business</label>
+                                <input type="email" id="email" placeholder="you@company.com" />
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" placeholder="Your company name" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="partnership-as">Partnership As...</label>
+                            <select id="partnership-as">
+                                <option value="">Select a role</option>
+                                <option value="reseller">Reseller</option>
+                                <option value="consultant">Consultant</option>
+                                <option value="developer">Developer</option>
+                                <option value="business_partner">Business Partner</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="proposal">Describe Your Partnership Proposal</label>
+                            <textarea id="proposal" placeholder="Tell us how you envision working with MAQSU..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-captcha">
+                                <input type="checkbox" id="robot" />
+                                <label for="robot">I'm not a robot</label>
+                                <span style="margin-left:auto; font-size:13px; color:var(--text-light);">reCAPTCHA</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    footer
+    ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="copy">
+                &copy; 2026 <strong>MAQSU</strong>, All Rights Reserved
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">SLA</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
