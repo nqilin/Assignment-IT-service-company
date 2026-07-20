@@ -1,18 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        /* ============================================================
+           ERP HERO
+        ============================================================ */
+        .erp-hero {
+            background: #08264d;
+            padding: 90px 0;
+            overflow: hidden;
+        }
+
+        .erp-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        /* Left */
+        .erp-tag {
+            display: inline-block;
+            background: #5aaeff;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 7px 12px;
+            border-radius: 4px;
+            margin-bottom: 22px;
+        }
+
+        .erp-content h1 {
+            color: #fff;
+            font-size: 54px;
+            line-height: 1.15;
+            margin-bottom: 24px;
+        }
+
+        .erp-content p {
+            color: rgba(255, 255, 255, .78);
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 520px;
+            margin-bottom: 35px;
+        }
+
+        .erp-buttons {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .erp-btn-primary {
+            background: #59a8ff;
+            color: #fff;
+            padding: 15px 34px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .erp-btn-primary:hover {
+            background: #3996ff;
+        }
+
+        .erp-btn-secondary {
+            border: 2px solid rgba(255, 255, 255, .3);
+            color: #fff;
+            padding: 15px 34px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .erp-btn-secondary:hover {
+            background: rgba(255, 255, 255, .1);
+        }
+
+
+        /* Right */
+        .erp-preview {
+            background: #17365f;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .erp-preview img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .erp-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .erp-stat {
+            background: #2a466d;
+            text-align: center;
+            padding: 18px 10px;
+            border-radius: 4px;
+        }
+
+        .erp-stat small {
+            display: block;
+            color: #d2d8df;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .erp-stat strong {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        /* ============================================================
+        ERP MODULES
+        ============================================================ */
+        .erp-modules {
+            padding: 90px 0;
+            background: #f7f9fc;
+        }
+
+        .erp-modules-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .erp-modules-header h2 {
+            font-size: 42px;
+            color: var(--primary);
+            margin-bottom: 12px
+        }
+
+        .erp-modules-header p {
+            color: var(--text-light);
+            font-size: 17px;
+        }
+
+        .erp-modules-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .erp-module {
+            background: #fff;
+            border: 1px solid #dce4ec;
+            border-radius: 8px;
+            padding: 28px;
+            transition: .35s;
+        }
+
+        .erp-module:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+        }
+
+        .erp-module-icon {
+            width: 58px;
+            height: 58px;
+            background: #5aaeff;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            margin-bottom: 22px;
+        }
+
+        .erp-module-icon i {
+            font-size: 28px;
+        }
+
+        .erp-module h3 {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 14px;
+        }
+
+        .erp-module p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* ============================================================
+        WHY PRIME
+        ============================================================ */
+        .why-PRIME {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .why-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        /* Left */
+        .why-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .12);
+        }
+
+        /* Right */
+        .why-content h2 {
+            font-size: 42px;
+            color: var(--primary);
+            margin-bottom: 35px;
+        }
+
+        .why-list {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .why-icon {
+            min-width: 56px;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #eef6ff;
+            color: #4da3ff;
+        }
+
+        .why-icon i {
+            font-size: 24px;
+        }
+
+        .why-text h3 {
+            color: var(--primary);
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .why-text p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* ============================================================
+        ERP CTA
+        ============================================================ */
+        .erp-cta {
+            padding: 90px 0;
+
+            background: #f7f9fc;
+        }
+
+        .erp-cta-box {
+            max-width: 980px;
+            margin: auto;
+            background: linear-gradient(135deg, #0b2d57, #133d70);
+            border-radius: 10px;
+            padding: 65px 40px;
+            text-align: center;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, .15);
+        }
+
+        .erp-cta-box h2 {
+            color: #fff;
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .erp-cta-box p {
+            max-width: 720px;
+            margin: 0 auto 40px;
+            color: rgba(255, 255, 255, .75);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .erp-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .erp-cta-primary {
+            background: #4da3ff;
+            color: #fff;
+            padding: 15px 38px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .erp-cta-primary:hover {
+            background: #258cff;
+        }
+
+        .erp-cta-secondary {
+            border: 2px solid rgba(255, 255, 255, .45);
+            color: #fff;
+            padding: 15px 38px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .erp-cta-secondary:hover {
+            background: rgba(255, 255, 255, .12);
+        }
+        /* ============================================================
+        RESPONSIVE (ALL SECTIONS)
+        ============================================================ */
+
+        /* ===================== 992px ===================== */
+        @media (max-width:992px) {
+            /* ERP Hero */
+            .erp-wrapper {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 50px;
+            }
+
+            .erp-content p {
+                margin: 0 auto 35px;
+            }
+
+            .erp-buttons {
+                justify-content: center;
+            }
+
+            /* ERP Modules */
+            .erp-modules-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* Why PRIME */
+            .why-wrapper {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .why-content {
+                text-align: center;
+            }
+
+            .why-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        /* ===================== 768px ===================== */
+        @media (max-width:768px) {
+            /* ERP Hero */
+            .erp-hero {
+                padding: 70px 0;
+            }
+
+            .erp-content h1 {
+                font-size: 38px;
+            }
+
+            .erp-content p {
+                font-size: 16px;
+            }
+
+            .erp-preview img {
+                height: 220px;
+            }
+
+            .erp-btn-primary,
+            .erp-btn-secondary {
+                width: 100%;
+                max-width: 260px;
+                text-align: center;
+            }
+
+            /* ERP Modules */
+            .erp-modules {
+                padding: 70px 0;
+            }
+
+            .erp-modules-header h2 {
+                font-size: 32px;
+            }
+
+            .erp-modules-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .erp-module {
+                padding: 24px;
+            }
+
+            /* Why PRIME */
+            .why-PRIME {
+                padding: 70px 0;
+            }
+
+            .why-content h2 {
+                font-size: 32px;
+            }
+
+            /* ERP CTA */
+            .erp-cta {
+                padding: 70px 0;
+            }
+
+            .erp-cta-box {
+                padding: 45px 25px;
+            }
+
+            .erp-cta-box h2 {
+                font-size: 32px;
+            }
+
+            .erp-cta-box p {
+                font-size: 16px;
+            }
+
+            .erp-cta-primary,
+            .erp-cta-secondary {
+                width: 100%;
+                max-width: 260px;
+                text-align: center;
+            }
+        }
+
+        /* ===================== 480px ===================== */
+        @media (max-width:480px) {
+            /* ERP Hero */
+            .erp-content h1 {
+                font-size: 30px;
+            }
+
+            .erp-stats {
+                grid-template-columns: 1fr;
+            }
+
+            /* ERP Modules */
+            .erp-modules-header h2 {
+                font-size: 28px;
+            }
+
+            /* Why PRIME */
+            .why-content h2 {
+                font-size: 28px;
+            }
+
+            /* ERP CTA */
+            .erp-cta-box h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <!-- nav-bar -->
+    <!--=========================================================
+    NAVBAR
+    ==========================================================-->
     <header class="navbar">
         <div class="container">
-            <a href="./index.html" class="logo">MAQ<span>SU</span></a>
+            <a href="./index.html" class="logo">
+                PRI<span>ME</span>
+            </a>
+
             <nav class="nav-links">
-                <a href="./Product.html">PRODUCTS</a>
+                <div class="dropdown">
+                    <a href="./Product.html">PRODUCTS</a>
+                    <div class="dropdown-menu">
+                        <li><a href="./sales.html">
+                                <i class="bi bi-graph-up"></i>Sales
+                            </a></li>
+                        <li><a href="./purchase.html">
+                                <i class="bi bi-cart3"></i>Purchase
+                            </a></li>
+                        <li><a href="./inventory.html">
+                                <i class="bi bi-box-seam"></i>Inventory
+                            </a></li>
+                        <li><a href="./manufacturing.html">
+                                <i class="bi bi-buildings"></i>Manufacturing
+                            </a></li>
+                        <li><a href="./pos.html">
+                                <i class="bi bi-credit-card"></i>POS
+                            </a></li>
+                        <li><a href="./e-commerce.html">
+                                <i class="bi bi-globe2"></i>E-Commerce
+                            </a></li>
+                    </div>
+                </div>
+
                 <a href="./about.html">ABOUT</a>
                 <a href="./partnership.html">PARTNERSHIP</a>
                 <a href="./support.html">SUPPORT</a>
@@ -21,5 +524,229 @@
             </nav>
         </div>
     </header>
+    <!-- ============================================================
+    ERP HERO
+    ============================================================ -->
+    <section class="erp-hero">
+        <div class="container">
+            <div class="erp-wrapper">
+                <!-- Left -->
+                <div class="erp-content">
+                    <span class="erp-tag">
+                        ENTERPRISE PLANNING 4.0
+                    </span>
+                    <h1>Technical Precision in Enterprise Resource Planning</h1>
+                    <p>Bridge the gap between heavy industry and modern
+                        intelligence. PRIME ERP delivers a robust,
+                        high-performance platform for manufacturing,
+                        inventory, finance, purchasing, and production
+                        management.</p>
+                    <div class="erp-buttons">
+                        <a href="#" class="erp-btn-primary">
+                            Start Integration
+                        </a>
+                        <a href="#" class="erp-btn-secondary">
+                            View Technical Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right -->
+                <div class="erp-preview">
+                    <img src="Image/Developer-project-1024x683.webp" alt="ERP Dashboard">
+                    <div class="erp-stats">
+                        <div class="erp-stat">
+                            <small>Efficiency</small>
+                            <strong>99.8%</strong>
+                        </div>
+
+                        <div class="erp-stat">
+                            <small>Uptime</small>
+                            <strong>24/7</strong>
+                        </div>
+
+                        <div class="erp-stat">
+                            <small>Latency</small>
+                            <strong>&lt;2ms</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================
+    ERP MODULES
+    ============================================================ -->
+    <section class="erp-modules">
+        <div class="container">
+            <div class="erp-modules-header">
+                <h2>Integrated Core Modules</h2>
+                <p>Our integrated architecture keeps every business process connected in real time.</p>
+            </div>
+
+            <div class="erp-modules-grid">
+                <!-- Sales -->
+                <div class="erp-module">
+                    <div class="erp-module-icon">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h3>Sales</h3>
+
+                    <p>Manage quotations, customer orders, invoicing, and revenue tracking with real-time financial
+                        integration.</p>
+                </div>
+
+                <!-- Purchase -->
+                <div class="erp-module">
+                    <div class="erp-module-icon">
+                        <i class="bi bi-cart3"></i>
+                    </div>
+                    
+                    <h3>Purchase</h3>
+                    <p>Automate procurement, Supplier management, purchase approvals, and inventory replenishment.</p>
+                </div>
+
+                <!-- Inventory -->
+                <div class="erp-module">
+                    <div class="erp-module-icon">
+                        <i class="bi bi-box-seam"></i>
+                    </div>
+
+                    <h3>Inventory</h3>
+                    <p>Monitor stock levels across warehouses with batch tracking, FIFO/LIFO, and barcode integration.</p>
+                </div>
+
+                <!-- Manufacturing -->
+                <div class="erp-module">
+                    <div class="erp-module-icon">
+                        <i class="bi bi-buildings"></i>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Plan production, manage Bill of Materials (BOM), work orders, and shop floor execution
+                        efficiently.</p>
+                </div>
+
+                <!-- POS -->
+                <div class="erp-module">
+                    <div class="erp-module-icon">
+                        <i class="bi bi-credit-card"></i>
+                    </div>
+
+                    <h3>POS</h3>
+                    <p>Fast retail transactions with synchronized inventory, offline support, and customer management.</p>
+
+                </div>
+
+                <!-- Ecommerce -->
+                <div class="erp-module">
+                    <div class="erp-module-icon">
+                        <i class="bi bi-globe2"></i>
+                    </div>
+
+                    <h3>E-Commerce</h3>
+
+                    <p>Synchronize products, orders, customers, and payments across online marketplaces automatically.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    WHY PRIME
+    ============================================================ -->
+    <section class="why-PRIME">
+        <div class="container">
+            <div class="why-wrapper">
+                <!-- Left -->
+                <div class="why-image">
+                    <img src="Image/yUJWI6j3EVtTC2Y72ozNHuPNfL8nYxxQQq4V3eLS.jpg" alt="Smart Factory">
+                </div>
+
+                <!-- Right -->
+                <div class="why-content">
+                    <h2>Why PRIME Systems?</h2>
+
+                    <div class="why-list">
+                        <!-- Item 1 -->
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+
+                            <div class="why-text">
+                                <h3>Technical Rigor</h3>
+                                <p>Built for stability under heavy workloads,
+                                    delivering secure, reliable, and mission-critical
+                                    ERP performance across every department.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="bi bi-arrow-repeat"></i>
+                            </div>
+
+                            <div class="why-text">
+                                <h3>Real-Time Synchronization</h3>
+                                <p>Every transaction updates inventory,
+                                    manufacturing, purchasing, finance, and
+                                    sales instantly without delays. </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="why-item">
+                            <div class="why-icon">
+                                <i class="bi bi-cpu"></i>
+                            </div>
+                            <div class="why-text">
+                                <h3>Industry-Specific Workflows</h3>
+
+                                <p>Designed specifically for manufacturing,
+                                    distribution, wholesale, retail, and
+                                    enterprise organizations with flexible
+                                    workflows.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     ERP CTA
+    ============================================================ -->
+    <section class="erp-cta">
+        <div class="container">
+            <div class="erp-cta-box">
+                <h2>Ready to Modernize Your Enterprise?</h2>
+                <p>Join thousands of businesses that rely on PRIME ERP to
+                    improve operational efficiency, automate workflows,
+                    and accelerate MEstainable business growth.</p>
+
+                <div class="erp-cta-buttons">
+                    <a href="#" class="erp-cta-primary">Request a Guided Demo</a>
+
+                    <a href="support.html" class="erp-cta-secondary">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="copy">
+                &copy; 2026 <strong>PRIME</strong>, All Rights Reserved
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">SLA</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

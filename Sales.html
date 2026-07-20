@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIME | Sales Management Software</title>
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        /* ============================================================
+           SALES CTA
+        ============================================================ */
+
+        .sales-banner {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            padding: 90px 0;
+            overflow: hidden;
+        }
+
+        .sales-banner-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .sales-tag {
+            display: inline-block;
+            background: rgba(0, 168, 255, .18);
+            color: var(--accent);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .sales-banner-content h2 {
+            color: var(--text-white);
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .sales-banner-content p {
+            color: rgba(255, 255, 255, .82);
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            max-width: 600px;
+            text-align: justify;
+        }
+
+        .sales-buttons {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .sales-buttons .btn-start {
+            background: var(--accent);
+            color: white;
+            padding: 14px 34px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .sales-buttons .btn-start:hover {
+            background: #0095e6;
+        }
+
+        .sales-buttons .btn-doc {
+            border: 2px solid rgba(255, 255, 255, .4);
+            color: white;
+            padding: 14px 34px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .sales-buttons .btn-doc:hover {
+            background: rgba(255, 255, 255, .1);
+        }
+
+        .sales-banner-image {
+            text-align: center;
+        }
+
+        .sales-banner-image i {
+            font-size: 240px;
+            color: white;
+            opacity: .95;
+        }
+
+        /* ============================================================
+           Sales Overview
+        ============================================================ */
+        .sales-overview {
+            padding: 80px 0;
+            background: var(--bg-white);
+        }
+
+        .sales-overview-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .sales-overview-content h2 {
+            color: var(--primary);
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .sales-line {
+            width: 70px;
+            height: 3px;
+            background: var(--accent);
+            margin-bottom: 25px;
+        }
+
+        .sales-line p {
+            font-size: 18px;
+            color: var(--text-normal);
+            line-height: 1.9;
+            max-width: 650px;
+            text-align: justify;
+        }
+
+        .sales-overview-content p {
+            color: var(--text-light);
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 35px;
+        }
+
+        .sales-feature-box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .sales-feature {
+            background: var(--bg-gray);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 22px;
+            transition: .3s;
+        }
+
+        .sales-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        }
+
+        .sales-feature i {
+            color: var(--accent);
+            font-size: 26px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .sales-feature h4 {
+            color: var(--primary);
+            font-size: 18px;
+        }
+
+        .sales-overview-image {
+            text-align: center;
+        }
+
+        .sales-overview-image img {
+            width: 100%;
+            max-width: 560px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .12);
+        }
+
+        /* ============================================================
+           Technical Capabilities
+        ============================================================ */
+
+        .tech-section {
+            padding: 80px 0;
+            background: var(--bg-gray);
+        }
+
+        .tech-header {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .tech-header h2 {
+            font-size: 42px;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .tech-header p {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .tech-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            transition: .35s;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+        }
+
+        .tech-icon {
+            width: 58px;
+            height: 58px;
+            background: #eef7ff;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--accent);
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .tech-card h3 {
+            color: var(--primary);
+            margin-bottom: 14px;
+            font-size: 22px;
+        }
+
+        .tech-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* ---------- Custom Module ---------- */
+        .tech-card.custom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 2px dashed var(--border-color);
+            background: #fafcff;
+        }
+
+        .tech-card.custom i {
+            font-size: 55px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .tech-card.custom h3 {
+            margin: 0;
+        }
+
+        /* ============================================================
+           SALES CTA SECTION
+        ============================================================ */
+        .sales-cta {
+            padding: 90px 0;
+            background: var(--bg-gray);
+        }
+
+        .sales-cta-box {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            border-radius: 22px;
+            padding: 70px 40px;
+            text-align: center;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, .18);
+        }
+
+        .sales-cta-box h2 {
+            color: var(--text-white);
+            font-size: 46px;
+            margin-bottom: 20px;
+        }
+
+        .sales-cta-box p {
+            color: rgba(255, 255, 255, .82);
+            max-width: 720px;
+            margin: 0 auto 40px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .sales-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .sales-cta-primary {
+            background: var(--accent);
+            color: var(--text-white);
+            padding: 16px 42px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .sales-cta-primary:hover {
+            background: #0095e6;
+            transform: translateY(-3px);
+        }
+
+        .sales-cta-secondary {
+            border: 2px solid rgba(255, 255, 255, .25);
+            color: var(--text-white);
+            padding: 16px 42px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .sales-cta-secondary:hover {
+            background: rgba(255, 255, 255, .08);
+            transform: translateY(-3px);
+        }
+
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
+        /* ---------- Tablet ---------- */
+        @media (max-width: 992px) {
+            /* Sales Banner */
+            .sales-banner-wrapper {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .sales-banner-content h2 {
+                font-size: 38px;
+            }
+
+            .sales-buttons {
+                justify-content: center;
+            }
+
+            .sales-banner-image {
+                margin-top: 30px;
+            }
+
+            .sales-banner-image i {
+                font-size: 180px;
+            }
+
+            /* Sales Overview */
+            .sales-overview-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .sales-overview-content {
+                text-align: center;
+            }
+
+            .sales-line {
+                margin: 0 auto 25px;
+            }
+
+            /* Technical */
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* Support */
+            .support-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ---------- Mobile ---------- */
+        @media (max-width:768px) {
+            /* Sales Banner */
+            .sales-banner {
+                padding: 70px 0;
+            }
+
+            .sales-banner-content h2 {
+                font-size: 32px;
+            }
+
+            .sales-banner-content p {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .sales-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sales-buttons a {
+                width: 220px;
+                text-align: center;
+            }
+
+            .sales-banner-image i {
+                font-size: 130px;
+            }
+
+            /* Sales Overview */
+            .sales-overview {
+                padding: 60px 0;
+            }
+
+            .sales-overview-content h2 {
+                font-size: 30px;
+            }
+
+            .sales-overview-content p {
+                text-align: left;
+            }
+
+            .sales-feature-box {
+                grid-template-columns: 1fr;
+            }
+
+            /* Technical */
+            .tech-section {
+                padding: 60px 0;
+            }
+
+            .tech-header h2 {
+                font-size: 30px;
+            }
+
+            .tech-header p {
+                font-size: 16px;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-card {
+                padding: 22px;
+            }
+
+            /* CTA */
+            .sales-cta {
+                padding: 60px 0;
+            }
+
+            .sales-cta-box {
+                padding: 40px 20px;
+            }
+
+            .sales-cta-box h2 {
+                font-size: 30px;
+            }
+
+            .sales-cta-box p {
+                font-size: 16px;
+            }
+
+            .sales-cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sales-cta-buttons a {
+                width: 220px;
+                text-align: center;
+            }
+
+            /* Contact Form */
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .contact-card,
+            .contact-form {
+                padding: 25px;
+            }
+        }
+
+        /* ---------- Small Mobile ---------- */
+        @media (max-width:480px) {
+            .sales-banner-content h2 {
+                font-size: 28px;
+            }
+
+            .sales-overview-content h2 {
+                font-size: 26px;
+            }
+
+            .tech-header h2 {
+                font-size: 26px;
+            }
+
+            .sales-cta-box h2 {
+                font-size: 26px;
+            }
+
+            .sales-banner-image i {
+                font-size: 100px;
+            }
+
+            .btn-start,
+            .btn-doc,
+            .sales-cta-primary,
+            .sales-cta-secondary {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--=========================================================
+        NAVBAR
+    ==========================================================-->
+    <header class="navbar">
+        <div class="container">
+            <a href="./index.html" class="logo">
+                PRI<span>ME</span>
+            </a>
+            <nav class="nav-links">
+                <div class="dropdown">
+                    <a href="./Product.html">PRODUCTS</a>
+                    <div class="dropdown-menu">
+                        <li><a href="./sales.html">
+                                <i class="bi bi-graph-up"></i>Sales
+                            </a></li>
+                        <li><a href="./purchase.html">
+                                <i class="bi bi-cart3"></i>Purchase
+                            </a></li>
+                        <li><a href="./inventory.html">
+                                <i class="bi bi-box-seam"></i>Inventory
+                            </a></li>
+                        <li><a href="./manufacturing.html">
+                                <i class="bi bi-buildings"></i>Manufacturing
+                            </a></li>
+                        <li><a href="./pos.html">
+                                <i class="bi bi-credit-card"></i>POS
+                            </a></li>
+                        <li><a href="./e-commerce.html">
+                                <i class="bi bi-globe2"></i>E-Commerce
+                            </a></li>
+                    </div>
+                </div>
+
+                <a href="./about.html">ABOUT</a>
+                <a href="./partnership.html">PARTNERSHIP</a>
+                <a href="./support.html">SUPPORT</a>
+                <a href="./comparison.html">COMPARISON</a>
+                <a href="#" class="btn-demo">BOOK DEMO</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================
+     SALES CTA
+    ============================================================ -->
+    <section class="sales-banner">
+        <div class="container">
+            <div class="sales-banner-wrapper">
+                <div class="sales-banner-content">
+                    <span class="sales-tag">
+                        ENTERPRISE SERIES
+                    </span>
+                    <h2>
+                        Sales Management Software
+                    </h2>
+                    <p>
+                        Streamline your entire revenue cycle from lead acquisition
+                        to final invoicing. PRIME Sales provides the technical
+                        precision needed to scale industrial operations with
+                        data-driven confidence.
+                    </p>
+
+                    <div class="sales-buttons">
+                        <a href="#" class="btn-start">
+                            Get Started
+                        </a>
+                        <a href="#" class="btn-doc">
+                            View Docs
+                        </a>
+                    </div>
+                </div>
+
+                <div class="sales-banner-image">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     SALES OVERVIEW
+    ============================================================ -->
+    <section class="sales-overview">
+        <div class="container">
+            <div class="sales-overview-wrapper">
+                <div class="sales-overview-content">
+                    <h2>Sales</h2>
+                    <div class="sales-line"></div>
+                    <p>
+                        Our high-performance Sales Module is engineered to bridge
+                        the gap between heavy industry and modern operational
+                        efficiency. By centralizing customer interactions and
+                        order workflows, we eliminate bottlenecks and manual entry
+                        errors, allowing your team to focus on high-value client
+                        relationships and precision forecasting.
+                    </p>
+
+                    <div class="sales-feature-box">
+                        <div class="sales-feature">
+                            <i class="bi bi-shield-check"></i>
+                            <h4>Secure Pipelines</h4>
+                        </div>
+
+                        <div class="sales-feature">
+                            <i class="bi bi-speedometer2"></i>
+                            <h4>Low Latency Data</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sales-overview-image">
+                    <img src="Image/Screenshot 2026-07-15 225601.jpg" alt="Sales Dashboard">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     TECHNICAL CAPABILITIES
+    ============================================================ -->
+    <section class="tech-section">
+        <div class="container">
+            <div class="tech-header">
+                <h2>Technical Capabilities</h2>
+                <p>
+                    Precision tools for the modern sales engineer.
+                </p>
+            </div>
+
+            <div class="tech-grid">
+                <!-- 1 -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="bi bi-receipt"></i>
+                    </div>
+
+                    <h3>Quotation Management</h3>
+                    <p>
+                        Generate complex industrial quotations with automated
+                        tax logic and tiered pricing models.
+                    </p>
+                </div>
+
+                <!-- 2 -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="bi bi-card-checklist"></i>
+                    </div>
+                    <h3>Order Processing</h3>
+                    <p>
+                        Seamlessly transition from quotation to
+                        production-ready orders with one-click approval.
+                    </p>
+                </div>
+
+                <!-- 3 -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+                    <h3>Automated Invoicing</h3>
+                    <p>
+                        Intelligent billing systems synchronized
+                        with your accounting ledger in real time.
+                    </p>
+                </div>
+
+                <!-- 4 -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+                    <h3>Customer CRM Integration</h3>
+                    <p>
+                        Unified customer history, communication,
+                        technical specifications and follow-up.
+                    </p>
+                </div>
+
+                <!-- 5 -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="bi bi-bar-chart"></i>
+                    </div>
+                    <h3>Real-time Sales Analytics</h3>
+                    <p>
+                        Dynamic dashboards displaying KPIs,
+                        conversion rates and sales pipeline health.
+                    </p>
+                </div>
+
+                <!-- 6 -->
+                <div class="tech-card custom">
+                    <i class="bi bi-plus-circle"></i>
+                    <h3>Custom Module Available</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     SALES CALL TO ACTION
+    ============================================================ -->
+    <section class="sales-cta">
+        <div class="container">
+            <div class="sales-cta-box">
+                <h2>
+                    Ready to optimize your sales engine?
+                </h2>
+                <p>
+                    Schedule a technical consultation with our solution architects
+                    to discover how PRIME ERP can transform your sales operations,
+                    improve productivity, and accelerate business growth.
+                </p>
+
+                <div class="sales-cta-buttons">
+                    <a href="#" class="sales-cta-primary">
+                        Book Demo
+                    </a>
+                    <a href="./support.html" class="sales-cta-secondary">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=========================================================
+        FOOTER
+    ==========================================================-->
+    <footer class="footer">
+        <div class="container">
+            <div class="copy">
+                &copy; 2026 <strong>PRIME</strong>, All Rights Reserved
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">SLA</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

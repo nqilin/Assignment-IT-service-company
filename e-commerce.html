@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-COMMERCE Software</title>
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        /* ============================================================
+   E-COMMERCE HERO
+============================================================ */
+        .ecommerce-hero {
+            background: linear-gradient(135deg, #08264d 0%, #153b6d 100%);
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .ecommerce-hero h1 {
+            font-size: 56px;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .ecommerce-hero h1 span {
+            color: var(--accent);
+        }
+
+        .ecommerce-hero p {
+            max-width: 700px;
+            margin: 0 auto 45px;
+            color: rgba(255, 255, 255, .75);
+            font-size: 19px;
+            line-height: 1.8;
+        }
+
+        .ecommerce-hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .ecommerce-btn-primary {
+            background: var(--accent);
+            color: #fff;
+            padding: 16px 42px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: .3s;
+            box-shadow: 0 10px 25px rgba(0, 168, 255, .25);
+        }
+
+        .ecommerce-btn-primary:hover {
+            background: #0095e6;
+            transform: translateY(-3px);
+        }
+
+        .ecommerce-btn-secondary {
+            padding: 16px 42px;
+            border: 2px solid rgba(255, 255, 255, .35);
+            color: #fff;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .ecommerce-btn-secondary:hover {
+            background: rgba(255, 255, 255, .12);
+        }
+
+        /* ============================================================
+   E-COMMERCE INTRODUCTION
+============================================================ */
+        .ecommerce-intro {
+            padding: 90px 0;
+            background: #f8fafc;
+        }
+
+        .ecommerce-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .ecommerce-content h2 {
+            font-size: 42px;
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .ecommerce-line {
+            width: 65px;
+            height: 4px;
+            background: var(--accent);
+            margin-bottom: 28px;
+        }
+
+        .ecommerce-content p {
+            color: var(--text-light);
+            font-size: 17px;
+            line-height: 1.9;
+            text-align: justify;
+        }
+
+        .ecommerce-image {
+            text-align: right;
+        }
+
+        .ecommerce-image img {
+            width: 100%;
+            max-width: 620px;
+            border-radius: 8px;
+            border: 1px solid #e5eaf0;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+        }
+
+        /* ============================================================
+   E-COMMERCE FEATURES
+============================================================ */
+        .ecommerce-features {
+            padding: 90px 0;
+            background: var(--bg-gray);
+        }
+
+        .ecommerce-features-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .ecommerce-features-title h2 {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .ecommerce-features-title p {
+            color: var(--text-light);
+            font-size: 17px;
+        }
+
+        .ecommerce-features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .ecommerce-card {
+            background: #fff;
+            border: 1px solid #dfe5ec;
+            border-radius: 8px;
+            padding: 30px;
+            transition: .35s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+        }
+
+        .ecommerce-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 35px rgba(0, 0, 0, .08);
+        }
+
+        .ecommerce-icon {
+            width: 62px;
+            height: 62px;
+            border-radius: 12px;
+            background: #eef6ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 22px;
+        }
+
+        .ecommerce-icon i {
+            font-size: 30px;
+            color: var(--accent);
+        }
+
+        .ecommerce-card h3 {
+            color: var(--primary);
+            font-size: 24px;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .ecommerce-card p {
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* ============================================================
+   E-COMMERCE WORKFLOW
+============================================================ */
+        .ecommerce-workflow {
+            background: #0b2d57;
+            padding: 90px 0;
+        }
+
+        .ecommerce-workflow-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .ecommerce-workflow-title h2 {
+            color: #fff;
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .ecommerce-workflow-title p {
+            color: rgba(255, 255, 255, .7);
+            font-size: 17px;
+        }
+
+        .ecommerce-workflow-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            position: relative;
+        }
+
+        .ecommerce-workflow-grid::before {
+            content: "";
+            position: absolute;
+            top: 38px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: rgba(111, 181, 255, .35);
+        }
+
+        .workflow-item {
+            position: relative;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .workflow-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 25px;
+            border-radius: 12px;
+            background: #66b3ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+        }
+
+        .workflow-icon i {
+            font-size: 30px;
+            color: #08345f;
+        }
+
+        .workflow-item h3 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .workflow-item p {
+            color: rgba(255, 255, 255, .75);
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 220px;
+            margin: auto;
+        }
+
+        /* ============================================================
+   E-COMMERCE CTA
+============================================================ */
+        .ecommerce-cta {
+            padding: 100px 20px;
+            background: #ffffff;
+            text-align: center;
+            border-top: 1px solid #e8edf3;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .ecommerce-cta h2 {
+            font-size: 48px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .ecommerce-cta p {
+            max-width: 700px;
+            margin: 0 auto 45px;
+            color: var(--text-light);
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .ecommerce-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .ecommerce-cta-primary {
+            display: inline-block;
+            min-width: 190px;
+            padding: 17px 42px;
+            background: var(--primary);
+            color: #fff;
+            border: 2px solid var(--primary);
+            border-radius: 6px;
+            font-weight: 600;
+            transition: .35s;
+            text-align: center;
+        }
+
+        .ecommerce-cta-primary:hover {
+            background: #0a4d94;
+            border-color: #0a4d94;
+            transform: translateY(-3px);
+        }
+
+        .ecommerce-cta-secondary {
+            display: inline-block;
+            min-width: 190px;
+            padding: 17px 42px;
+            background: #fff;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            border-radius: 6px;
+            font-weight: 600;
+            transition: .35s;
+            text-align: center;
+        }
+
+        .ecommerce-cta-secondary:hover {
+            background: var(--primary);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* ============================================================
+   RESPONSIVE
+============================================================ */
+        /* ---------- Large Tablet ---------- */
+        @media (max-width:1200px) {
+            .ecommerce-features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ---------- Tablet ---------- */
+        @media (max-width:992px) {
+
+            /* Introduction */
+            .ecommerce-wrapper {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .ecommerce-content {
+                text-align: center;
+            }
+
+            .ecommerce-line {
+                margin: 0 auto 25px;
+            }
+
+            .ecommerce-content p {
+                text-align: center;
+            }
+
+            .ecommerce-image {
+                text-align: center;
+            }
+
+            /* Workflow */
+            .ecommerce-workflow-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 60px 40px;
+            }
+
+            .ecommerce-workflow-grid::before {
+                display: none;
+            }
+
+        }
+
+
+        /* ---------- Mobile ---------- */
+        @media (max-width:768px) {
+
+            /* Hero */
+            .ecommerce-hero {
+                padding: 90px 20px;
+            }
+
+            .ecommerce-hero h1 {
+                font-size: 38px;
+            }
+
+            .ecommerce-hero p {
+                font-size: 16px;
+            }
+
+            .ecommerce-btn-primary,
+            .ecommerce-btn-secondary {
+                width: 100%;
+                max-width: 260px;
+            }
+
+            /* Introduction */
+            .ecommerce-intro {
+                padding: 70px 0;
+            }
+
+            .ecommerce-content h2 {
+                font-size: 32px;
+            }
+
+            .ecommerce-content p {
+                font-size: 16px;
+            }
+
+            /* Features */
+            .ecommerce-features {
+                padding: 70px 0;
+            }
+
+            .ecommerce-features-title h2 {
+                font-size: 32px;
+            }
+
+            .ecommerce-features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ecommerce-card {
+                padding: 25px;
+            }
+
+            .ecommerce-card h3 {
+                font-size: 22px;
+            }
+
+            /* Workflow */
+            .ecommerce-workflow {
+                padding: 70px 0;
+            }
+
+            .ecommerce-workflow-title h2 {
+                font-size: 32px;
+            }
+
+            .ecommerce-workflow-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-item {
+                max-width: 320px;
+                margin: auto;
+            }
+
+            /* CTA */
+            .ecommerce-cta {
+                padding: 70px 20px;
+            }
+
+            .ecommerce-cta h2 {
+                font-size: 34px;
+            }
+
+            .ecommerce-cta p {
+                font-size: 16px;
+            }
+
+            .ecommerce-cta-primary,
+            .ecommerce-cta-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            /* Support Page */
+            .support-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .contact-card,
+            .contact-form {
+                padding: 25px;
+            }
+        }
+
+
+        /* ---------- Small Mobile ---------- */
+        @media (max-width:480px) {
+            .ecommerce-hero h1 {
+                font-size: 30px;
+            }
+
+            .ecommerce-content h2 {
+                font-size: 28px;
+            }
+
+            .workflow-item h3 {
+                font-size: 22px;
+            }
+
+            .ecommerce-cta h2 {
+                font-size: 28px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--=========================================================
+        NAVBAR
+    ==========================================================-->
+
+    <header class="navbar">
+        <div class="container">
+            <a href="./index.html" class="logo">
+                PRI<span>ME</span>
+            </a>
+
+            <nav class="nav-links">
+                <div class="dropdown">
+                    <a href="./Product.html">PRODUCTS</a>
+                    <div class="dropdown-menu">
+                        <li><a href="./sales.html">
+                                <i class="bi bi-graph-up"></i>Sales
+                            </a></li>
+                        <li><a href="./purchase.html">
+                                <i class="bi bi-cart3"></i>Purchase
+                            </a></li>
+                        <li><a href="./inventory.html">
+                                <i class="bi bi-box-seam"></i>Inventory
+                            </a></li>
+                        <li><a href="./manufacturing.html">
+                                <i class="bi bi-buildings"></i>Manufacturing
+                            </a></li>
+                        <li><a href="./pos.html">
+                                <i class="bi bi-credit-card"></i>POS
+                            </a></li>
+                        <li><a href="./e-commerce.html">
+                                <i class="bi bi-globe2"></i>E-Commerce
+                            </a></li>
+                    </div>
+                </div>
+
+                <a href="./about.html">ABOUT</a>
+                <a href="./partnership.html">PARTNERSHIP</a>
+                <a href="./support.html">SUPPORT</a>
+                <a href="./comparison.html">COMPARISON</a>
+                <a href="#" class="btn-demo">BOOK DEMO</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================
+     E-COMMERCE HERO
+============================================================ -->
+
+    <section class="ecommerce-hero">
+        <div class="container">
+            <h1>
+                E-Commerce <span>Software</span>
+            </h1>
+
+            <p>
+                Simplify your E-Commerce process with PRIME ERP.
+                Integrated tools for high-performance digital commerce.
+            </p>
+
+            <div class="ecommerce-hero-buttons">
+                <a href="#" class="ecommerce-btn-primary">
+                    Get Started
+                </a>
+
+                <a href="#" class="ecommerce-btn-secondary">
+                    View Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     E-COMMERCE INTRODUCTION
+============================================================ -->
+
+    <section class="ecommerce-intro">
+        <div class="container">
+            <div class="ecommerce-wrapper">
+                <!-- Left -->
+                <div class="ecommerce-content">
+                    <h2>
+                        E-Commerce Software
+                    </h2>
+                    <div class="ecommerce-line"></div>
+
+                    <p>
+                        Businesses may effectively create, manage, and optimise
+                        online storefronts with the help of e-commerce software.
+                        It includes tools for product management, customizable
+                        storefronts, secure order processing, sales analytics,
+                        and digital marketing. PRIME ERP enables businesses to
+                        maximize revenue while delivering a seamless shopping
+                        experience across every sales channel.
+                    </p>
+                </div>
+
+                <!-- Right -->
+                <div class="ecommerce-image">
+                    <img src="Image/business-growth-illustration-concept-in-flat-style-money-coin-profit-graph-icon-suitable-for-many-purposes-vector.jpg"
+                        alt="E-Commerce Software">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     E-COMMERCE FEATURES
+============================================================ -->
+    <section class="ecommerce-features">
+        <div class="container">
+            <div class="ecommerce-features-title">
+                <h2>
+                    Storefront Excellence
+                </h2>
+                <p>
+                    Precision tools designed for modern digital commerce.
+                </p>
+            </div>
+
+            <div class="ecommerce-features-grid">
+                <!-- Card 1 -->
+                <div class="ecommerce-card">
+                    <div class="ecommerce-icon">
+                        <i class="bi bi-palette"></i>
+                    </div>
+                    <h3>
+                        Customizable Themes
+                    </h3>
+
+                    <p>
+                        Build a unique brand identity with customizable storefront themes, responsive layouts, and
+                        professional design templates.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="ecommerce-card">
+                    <div class="ecommerce-icon">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+
+                    <h3>
+                        Secure Payment Gateways
+                    </h3>
+
+                    <p>
+                        Support secure online transactions through multiple payment providers with enterprise-grade
+                        encryption and fraud protection.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="ecommerce-card">
+                    <div class="ecommerce-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+
+                    <h3>
+                        Omni-channel Integration
+                    </h3>
+
+                    <p>
+                        Synchronize products, inventory, and orders across marketplaces, social commerce, and your
+                        physical stores.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="ecommerce-card">
+                    <div class="ecommerce-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h3>
+                        SEO & Marketing Tools
+                    </h3>
+
+                    <p>
+                        Increase visibility with built-in SEO optimization, email marketing, promotional campaigns, and
+                        customer engagement tools.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     E-COMMERCE WORKFLOW
+============================================================ -->
+    <section class="ecommerce-workflow">
+        <div class="container">
+            <div class="ecommerce-workflow-title">
+                <h2>
+                    E-Commerce Workflow
+                </h2>
+
+                <p>
+                    Streamline every stage from storefront setup to business insights.
+                </p>
+            </div>
+
+            <div class="ecommerce-workflow-grid">
+                <!-- Step 1 -->
+                <div class="workflow-item">
+                    <div class="workflow-icon">
+                        <i class="bi bi-shop"></i>
+                    </div>
+
+                    <h3>
+                        Store Setup
+                    </h3>
+
+                    <p>
+                        Configure domains, branding, themes, and storefront layouts.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="workflow-item">
+                    <div class="workflow-icon">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+
+                    <h3>
+                        Product Sync
+                    </h3>
+
+                    <p>
+                        Automatically synchronize inventory and products from ERP.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="workflow-item">
+                    <div class="workflow-icon">
+                        <i class="bi bi-bag-check"></i>
+                    </div>
+
+                    <h3>
+                        Order Processing
+                    </h3>
+
+                    <p>
+                        Manage real-time fulfillment, shipping, and order tracking.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="workflow-item">
+                    <div class="workflow-icon">
+                        <i class="bi bi-bar-chart"></i>
+                    </div>
+                    <h3>
+                        Analytics
+                    </h3>
+
+                    <p>
+                        Gain performance insights, reports, and sales forecasting.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     E-COMMERCE CTA
+============================================================ -->
+    <section class="ecommerce-cta">
+        <div class="container">
+            <h2>
+                Scale your digital presence today
+            </h2>
+
+            <p>
+                Join thousands of businesses using PRIME ERP to power
+                online sales, manage operations, and accelerate growth.
+            </p>
+
+            <div class="ecommerce-cta-buttons">
+                <a href="#" class="ecommerce-cta-primary">
+                    Book Demo
+                </a>
+
+                <a href="support.html" class="ecommerce-cta-secondary">
+                    Contact Sales
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--=========================================================
+        FOOTER
+==========================================================-->
+    <footer class="footer">
+        <div class="container">
+            <div class="copy">
+                &copy; 2026 <strong>PRIME</strong>, All Rights Reserved
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">SLA</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

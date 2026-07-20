@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MAQSU Comparison – ERP Software</title>
+    <title>PRIME Comparison – ERP Software</title>
     <!-- External reset.css -->
     <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
         /* ============================================================
            Comparison Styles
@@ -36,7 +37,7 @@
             text-align: center;
             letter-spacing: 0.5px;
         }
-        .comparison-col.maqsu h3 {
+        .comparison-col.prime h3 {
             color: var(--primary);
         }
         .comparison-col.other h3 {
@@ -66,7 +67,7 @@
             text-align: center;
             margin-top: 2px;
         }
-        .comparison-col.maqsu .icon {
+        .comparison-col.prime .icon {
             color: var(--success-green);
         }
         .comparison-col.other .icon {
@@ -94,7 +95,7 @@
 
         /* ============================================================
            5. Responsive
-           ============================================================ */
+        ============================================================ */
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 40px;
@@ -167,9 +168,35 @@
     ============================================================ -->
     <header class="navbar">
         <div class="container">
-            <a href="./index.html" class="logo">MAQ<span>SU</span></a>
+            <a href="./index.html" class="logo">
+                PRI<span>ME</span>
+            </a>
+
             <nav class="nav-links">
-                <a href="./Product.html">PRODUCTS</a>
+                <div class="dropdown">
+                    <a href="./Product.html">PRODUCTS</a>
+                    <div class="dropdown-menu">
+                        <li><a href="./sales.html">
+                                <i class="bi bi-graph-up"></i>Sales
+                            </a></li>
+                        <li><a href="./purchase.html">
+                                <i class="bi bi-cart3"></i>Purchase
+                            </a></li>
+                        <li><a href="./inventory.html">
+                                <i class="bi bi-box-seam"></i>Inventory
+                            </a></li>
+                        <li><a href="./manufacturing.html">
+                                <i class="bi bi-buildings"></i>Manufacturing
+                            </a></li>
+                        <li><a href="./pos.html">
+                                <i class="bi bi-credit-card"></i>POS
+                            </a></li>
+                        <li><a href="./e-commerce.html">
+                                <i class="bi bi-globe2"></i>E-Commerce
+                            </a></li>
+                    </div>
+                </div>
+
                 <a href="./about.html">ABOUT</a>
                 <a href="./partnership.html">PARTNERSHIP</a>
                 <a href="./support.html">SUPPORT</a>
@@ -186,7 +213,7 @@
         <div class="container">
             <h1>General <span class="highlight">Comparison</span></h1>
             <p>
-                Here are points of difference between MAQSU ERP Software and other ERP systems
+                Here are points of difference between PRIME ERP Software and other ERP systems
                 based on functions and benefits.
             </p>
         </div>
@@ -197,15 +224,15 @@
     ============================================================ -->
     <section class="section section-light">
         <div class="container">
-            <h2 class="section-title">MAQSU vs. Other ERP</h2>
+            <h2 class="section-title">PRIME vs. Other ERP</h2>
             <p class="section-sub">
-                See why MAQSU stands out with tailored features for Cambodian SMEs.
+                See why PRIME stands out with tailored features for Cambodian SMEs.
             </p>
 
             <div class="comparison-grid">
-                <!-- MAQSU Column -->
-                <div class="comparison-col maqsu">
-                    <h3>MAQSU</h3>
+                <!-- PRIME Column -->
+                <div class="comparison-col prime">
+                    <h3>PRIME</h3>
                     <ul>
                         <li><span class="icon">✔</span> Easy to use for accountants in Cambodia</li>
                         <li><span class="icon">✔</span> Available both online and offline</li>
@@ -240,7 +267,7 @@
     <footer class="footer">
         <div class="container">
             <div class="copy">
-                &copy; 2026 <strong>MAQSU</strong>, All Rights Reserved
+                &copy; 2026 <strong>PRIME</strong>, All Rights Reserved
             </div>
             <div class="footer-links">
                 <a href="#">Terms of Use</a>
