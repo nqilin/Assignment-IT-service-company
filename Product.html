@@ -4,1002 +4,696 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - MAQSU ERP</title>
-
+    <title>Support - PRIME ERP</title>
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
     <style>
-/* ============================================================
+        /* ============================================================
            Support Page
-============================================================ */
-
-        .support-wrapper{
-            display:grid;
-            grid-template-columns:420px 1fr;
-            gap:40px;
-            align-items:start;
+        ============================================================ */
+        .support-wrapper {
+            display: grid;
+            grid-template-columns: 420px 1fr;
+            gap: 40px;
+            align-items: start;
         }
 
-/* ============================================================
-   Product Hero
-============================================================ */
-
-.product-hero{
-
-    background:linear-gradient(135deg,var(--primary-dark),var(--primary));
-
-    padding:90px 0;
-
-}
-
-.product-hero-wrapper{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:70px;
-
-}
-
-.product-content{
-
-    flex:1;
-
-}
-
-.product-tag{
-
-    display:inline-block;
-
-    padding:8px 14px;
-
-    background:rgba(0,168,255,.18);
-
-    color:var(--accent);
-
-    font-size:12px;
-
-    font-weight:700;
-
-    letter-spacing:1px;
-
-    border-radius:4px;
-
-    margin-bottom:20px;
-
-}
-
-.product-content h1{
-
-    color:var(--text-white);
-
-    font-size:48px;
-
-    line-height:1.2;
-
-    margin-bottom:24px;
-
-    max-width:580px;
-
-}
-
-.product-content p{
-
-    color:rgba(255,255,255,.82);
-
-    font-size:18px;
-
-    line-height:1.8;
-
-    max-width:540px;
-
-    margin-bottom:35px;
-
-}
-
-.hero-buttons{
-
-    display:flex;
-
-    gap:18px;
-
-}
-
-.btn-primary{
-
-    background:var(--accent);
-
-    color:var(--text-white);
-
-    padding:14px 34px;
-
-    border-radius:6px;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-.btn-primary:hover{
-
-    background:#0095e6;
-
-}
-
-.btn-secondary{
-
-    border:2px solid rgba(255,255,255,.35);
-
-    color:var(--text-white);
-
-    padding:14px 34px;
-
-    border-radius:6px;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-.btn-secondary:hover{
-
-    background:rgba(255,255,255,.12);
-
-}
-
-.product-image{
-
-    flex:1;
-
-    text-align:right;
-
-}
-
-.product-image img{
-
-    width:100%;
-
-    max-width:560px;
-
-    border-radius:12px;
-
-    border:1px solid rgba(255,255,255,.15);
-
-    box-shadow:0 20px 50px rgba(0,0,0,.25);
-
-}
-/* ============================================================
-   Integrated Modules
-============================================================ */
-
-.modules{
-    padding:80px 0;
-    background:var(--bg-gray);
-}
-
-.modules-heading{
-    margin-bottom:50px;
-    border-left:5px solid var(--accent);
-    padding-left:18px;
-}
-
-.modules-heading h2{
-    font-size:42px;
-    color:var(--primary);
-    margin-bottom:8px;
-}
-
-.modules-heading p{
-    font-size:18px;
-    color:var(--text-light);
-}
-
-.modules-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
-}
-
-.module-card{
-
-    background:var(--bg-white);
-
-    border:1px solid var(--border-color);
-
-    border-radius:var(--radius-md);
-
-    padding:35px;
-
-    transition:.3s;
-
-}
-
-.module-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
-
-}
-
-.module-icon{
-
-    width:60px;
-    height:60px;
-
-    background:#eef7ff;
-
-    color:var(--accent);
-
-    border-radius:10px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    font-size:28px;
-
-    margin-bottom:25px;
-
-}
-
-.module-card h3{
-
-    color:var(--primary);
-
-    margin-bottom:14px;
-
-    font-size:26px;
-
-}
-
-.module-card p{
-
-    color:var(--text-light);
-
-    line-height:1.8;
-
-    margin-bottom:25px;
-
-}
-
-.module-card a{
-
-    color:var(--accent);
-
-    font-weight:700;
-
-    text-transform:uppercase;
-
-    font-size:14px;
-
-    letter-spacing:.5px;
-
-}
-
-.module-card a i{
-
-    margin-left:6px;
-
-    transition:.3s;
-
-}
-
-.module-card:hover a i{
-
-    transform:translateX(6px);
-
-}
-/* ============================================================
-   WHY MAQSU
-============================================================ */
-
-.why-maqsu{
-    background: var(--bg-white);
-    padding: 80px 0;
-}
-
-.why-grid{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 50px;
-    text-align: center;
-}
-
-.why-card{
-    padding: 20px;
-}
-
-.why-icon{
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: rgba(0,168,255,.08);
-    color: var(--primary);
-
-    border-radius: 50%;
-    font-size: 32px;
-
-    transition: .3s;
-}
-
-.why-card:hover .why-icon{
-
-    background: var(--primary);
-    color: var(--text-white);
-
-    transform: translateY(-6px);
-
-}
-
-.why-card h3{
-
-    font-size: 28px;
-    color: var(--primary);
-    margin-bottom: 15px;
-
-}
-
-.why-card p{
-
-    color: var(--text-light);
-    font-size: 17px;
-    line-height: 1.8;
-
-}
-
-/* ================= Dropdown ================= */
-
-.dropdown{
-    position: relative;
-}
-
-.dropdown-menu{
-    position: absolute;
-    top: 100%;
-    left: 0;
-
-    width: 220px;
-
-    background: var(--bg-white);
-    border-radius: var(--radius-md);
-    box-shadow: 0 10px 25px rgba(0,0,0,.12);
-
-    list-style: none;
-    margin: 0;
-    padding: 8px 0;
-
-    display: none;
-    z-index: 999;
-}
-
-.dropdown:hover .dropdown-menu{
-    display: block;
-}
-
-.dropdown-menu li{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.dropdown-menu li a{
-    display: block;
-    width: 100%;
-
-    padding: 12px 20px;
-
-    color: var(--text-normal) !important;
-    text-decoration: none;
-
-    transition: .3s;
-}
-
-.dropdown-menu li a:hover{
-    background: var(--primary);
-    color: var(--text-white) !important;
-}
-.dropdown-menu i{
-    font-size:20px;
-    color:var(--accent);
-    margin-right:12px;
-    width:24px;
-    text-align:center;
-}
-/* ============================================================
-   RESPONSIVE
-============================================================ */
-
-/* ---------- Desktop / Laptop ---------- */
-
-@media (max-width:1200px){
-
-    .modules-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-
-/* ---------- Tablet ---------- */
-
-@media (max-width:992px){
-
-    /* Product Hero */
-
-    .product-hero-wrapper{
-        flex-direction:column;
-        text-align:center;
-        gap:50px;
-    }
-
-    .product-content h1{
-        font-size:38px;
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .product-content p{
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-        flex-wrap:wrap;
-    }
-
-    .product-image{
-        text-align:center;
-    }
-
-    /* Modules */
-
-    .modules-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    /* Why MAQSU */
-
-    .why-grid{
-        grid-template-columns:1fr;
-        gap:40px;
-    }
-
-    /* Support */
-
-    .support-wrapper{
-        grid-template-columns:1fr;
-    }
-
-}
-
-
-/* ---------- Mobile ---------- */
-
-@media (max-width:768px){
-
-    /* Hero */
-
-    .product-hero{
-        padding:70px 0;
-    }
-
-    .product-content h1{
-        font-size:32px;
-    }
-
-    .product-content p{
-        font-size:16px;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .btn-primary,
-    .btn-secondary{
-        width:100%;
-        max-width:260px;
-        text-align:center;
-    }
-
-    /* Modules */
-
-    .modules{
-        padding:70px 0;
-    }
-
-    .modules-heading h2{
-        font-size:34px;
-    }
-
-    .modules-heading p{
-        font-size:16px;
-    }
-
-    .modules-grid{
-        grid-template-columns:1fr;
-    }
-
-    .module-card{
-        padding:25px;
-    }
-
-    .module-card h3{
-        font-size:24px;
-    }
-
-    /* Why MAQSU */
-
-    .why-maqsu{
-        padding:70px 0;
-    }
-
-    .why-card h3{
-        font-size:24px;
-    }
-
-    .why-card p{
-        font-size:16px;
-    }
-
-    /* Support Form */
-
-    .form-grid{
-        grid-template-columns:1fr;
-    }
-
-    .form-group.full{
-        grid-column:auto;
-    }
-
-    .contact-card,
-    .contact-form{
-        padding:25px;
-    }
-
-}
-
-
-/* ---------- Small Mobile ---------- */
-
-@media (max-width:480px){
-
-    /* Hero */
-
-    .product-content h1{
-        font-size:28px;
-    }
-
-    .product-content p{
-        font-size:15px;
-    }
-
-    .product-tag{
-        font-size:11px;
-    }
-
-    /* Modules */
-
-    .modules-heading h2{
-        font-size:28px;
-    }
-
-    .module-card{
-        padding:22px;
-    }
-
-    .module-icon{
-        width:55px;
-        height:55px;
-        font-size:24px;
-    }
-
-    .module-card h3{
-        font-size:22px;
-    }
-
-    /* Why MAQSU */
-
-    .why-icon{
-        width:60px;
-        height:60px;
-        font-size:28px;
-    }
-
-    .why-card h3{
-        font-size:22px;
-    }
-
-    .why-card p{
-        font-size:15px;
-    }
-
-}
+        /* ============================================================
+           Product Hero
+        ============================================================ */
+        .product-hero {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            padding: 90px 0;
+        }
+
+        .product-hero-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .product-content {
+            flex: 1;
+        }
+
+        .product-tag {
+            display: inline-block;
+            padding: 8px 14px;
+            background: rgba(0, 168, 255, .18);
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .product-content h1 {
+            color: var(--text-white);
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            max-width: 580px;
+        }
+
+        .product-content p {
+            color: rgba(255, 255, 255, .82);
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 540px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 18px;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--text-white);
+            padding: 14px 34px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-primary:hover {
+            background: #0095e6;
+        }
+
+        .btn-secondary {
+            border: 2px solid rgba(255, 255, 255, .35);
+            color: var(--text-white);
+            padding: 14px 34px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, .12);
+        }
+
+        .product-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 560px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, .15);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
+        }
+
+        /* ============================================================
+           Integrated Modules
+        ============================================================ */
+        .modules {
+            padding: 80px 0;
+            background: var(--bg-gray);
+        }
+
+        .modules-heading {
+            margin-bottom: 50px;
+            border-left: 5px solid var(--accent);
+            padding-left: 18px;
+        }
+
+        .modules-heading h2 {
+            font-size: 42px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .modules-heading p {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .module-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 35px;
+            transition: .3s;
+        }
+
+        .module-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
+        }
+
+        .module-icon {
+            width: 60px;
+            height: 60px;
+            background: #eef7ff;
+            color: var(--accent);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .module-card h3 {
+            color: var(--primary);
+            margin-bottom: 14px;
+            font-size: 26px;
+        }
+
+        .module-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .module-card a {
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: .5px;
+        }
+
+        .module-card a i {
+            margin-left: 6px;
+            transition: .3s;
+        }
+
+        .module-card:hover a i {
+            transform: translateX(6px);
+        }
+
+        /* ============================================================
+           WHY PRIME
+        ============================================================ */
+        .why-prime {
+            background: var(--bg-white);
+            padding: 80px 0;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            text-align: center;
+        }
+
+        .why-card {
+            padding: 20px;
+        }
+
+        .why-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 168, 255, .08);
+            color: var(--primary);
+            border-radius: 50%;
+            font-size: 32px;
+            transition: .3s;
+        }
+
+        .why-card:hover .why-icon {
+            background: var(--primary);
+            color: var(--text-white);
+            transform: translateY(-6px);
+        }
+
+        .why-card h3 {
+            font-size: 28px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .why-card p {
+            color: var(--text-light);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
+        /* ---------- Desktop / Laptop ---------- */
+        @media (max-width:1200px) {
+            .modules-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        /* ---------- Tablet ---------- */
+        @media (max-width:992px) {
+            /* Product Hero */
+            .product-hero-wrapper {
+                flex-direction: column;
+                text-align: center;
+                gap: 50px;
+            }
+
+            .product-content h1 {
+                font-size: 38px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .product-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .product-image {
+                text-align: center;
+            }
+
+            /* Modules */
+            .modules-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* Why PRIME */
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            /* Support */
+            .support-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ---------- Mobile ---------- */
+        @media (max-width:768px) {
+            /* Hero */
+            .product-hero {
+                padding: 70px 0;
+            }
+
+            .product-content h1 {
+                font-size: 32px;
+            }
+
+            .product-content p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 260px;
+                text-align: center;
+            }
+
+            /* Modules */
+            .modules {
+                padding: 70px 0;
+            }
+
+            .modules-heading h2 {
+                font-size: 34px;
+            }
+
+            .modules-heading p {
+                font-size: 16px;
+            }
+
+            .modules-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .module-card {
+                padding: 25px;
+            }
+
+            .module-card h3 {
+                font-size: 24px;
+            }
+
+            /* Why PRIME */
+            .why-prime {
+                padding: 70px 0;
+            }
+
+            .why-card h3 {
+                font-size: 24px;
+            }
+
+            .why-card p {
+                font-size: 16px;
+            }
+
+            /* Support Form */
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .contact-card,
+            .contact-form {
+                padding: 25px;
+            }
+        }
+
+        /* ---------- Small Mobile ---------- */
+        @media (max-width:480px) {
+            /* Hero */
+            .product-content h1 {
+                font-size: 28px;
+            }
+
+            .product-content p {
+                font-size: 15px;
+            }
+
+            .product-tag {
+                font-size: 11px;
+            }
+
+            /* Modules */
+            .modules-heading h2 {
+                font-size: 28px;
+            }
+
+            .module-card {
+                padding: 22px;
+            }
+
+            .module-icon {
+                width: 55px;
+                height: 55px;
+                font-size: 24px;
+            }
+
+            .module-card h3 {
+                font-size: 22px;
+            }
+
+            /* Why PRIME */
+            .why-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+            }
+
+            .why-card h3 {
+                font-size: 22px;
+            }
+
+            .why-card p {
+                font-size: 15px;
+            }
+        }
     </style>
-
 </head>
-
 <body>
 
     <!--=========================================================
         NAVBAR
     ==========================================================-->
-
     <header class="navbar">
         <div class="container">
-
             <a href="./index.html" class="logo">
-                MAQ<span>SU</span>
+                PRI<span>ME</span>
             </a>
+            <!-- hambuger -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
 
-            <nav class="nav-links">
-
+            <nav class="nav-links" id="navLinks">
                 <div class="dropdown">
                     <a href="./Product.html">PRODUCTS</a>
                     <div class="dropdown-menu">
-                        <li><a href="./sales.html">Sales
-                            <i class="bi bi-graph-up"></i>
-                        </a></li>
-                        <li><a href="./purchase.html">Purchase
-                            <i class="bi bi-cart3"></i>
-                        </a></li>
-                        <li><a href="./inventory.html">Inventory
-                            <i class="bi bi-box-seam"></i>
-                        </a></li>
-                        <li><a href="./manufacturing.html">Manufacturing
-                            <i class="bi bi-buildings"></i>
-                        </a></li>
-                        <li><a href="./pos.html">POS
-                            <i class="bi bi-credit-card"></i>
-                        </a></li>
-                        <li><a href="./e-commerce.html">E-Commerce
-                            <i class="bi bi-globe2"></i>
-                        </a></li>
+                        <li><a href="./sales.html">
+                                <i class="bi bi-graph-up"></i>Sales
+                            </a></li>
+                        <li><a href="./purchase.html">
+                                <i class="bi bi-cart3"></i>Purchase
+                            </a></li>
+                        <li><a href="./inventory.html">
+                                <i class="bi bi-box-seam"></i>Inventory
+                            </a></li>
+                        <li><a href="./manufacturing.html">
+                                <i class="bi bi-buildings"></i>Manufacturing
+                            </a></li>
+                        <li><a href="./pos.html">
+                                <i class="bi bi-credit-card"></i>POS
+                            </a></li>
+                        <li><a href="./e-commerce.html">
+                                <i class="bi bi-globe2"></i>E-Commerce
+                            </a></li>
                     </div>
                 </div>
 
                 <a href="./about.html">ABOUT</a>
-
                 <a href="./partnership.html">PARTNERSHIP</a>
-
                 <a href="./support.html">SUPPORT</a>
-
                 <a href="./comparison.html">COMPARISON</a>
-
                 <a href="#" class="btn-demo">BOOK DEMO</a>
-
             </nav>
-
         </div>
+        
+        <div class="nav-overlay" id="navOverlay"></div>
     </header>
- 
-<!-- ============================================================
+
+    <!-- ============================================================
      PRODUCT HERO
-============================================================ -->
+    ============================================================ -->
+    <section class="product-hero">
+        <div class="container">
+            <div class="product-hero-wrapper">
+                <div class="product-content">
+                    <span class="product-tag">
+                        SYSTEM OVERVIEW
+                    </span>
 
-<section class="product-hero">
+                    <h1>
+                        Enterprise ERP Solutions for Modern Industry
+                    </h1>
 
-    <div class="container">
+                    <p>
+                        Unified operational control through technical precision.
+                        PRIME integrates your entire production lifecycle into a
+                        single, high-performance digital environment.
+                    </p>
 
-        <div class="product-hero-wrapper">
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-primary">
+                            Start Free Trial
+                        </a>
 
-            <div class="product-content">
-
-                <span class="product-tag">
-                    SYSTEM OVERVIEW
-                </span>
-
-                <h1>
-                    Enterprise ERP Solutions for Modern Industry
-                </h1>
-
-                <p>
-                    Unified operational control through technical precision.
-                    MAQSU integrates your entire production lifecycle into a
-                    single, high-performance digital environment.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#" class="btn-primary">
-                        Start Free Trial
-                    </a>
-
-                    <a href="#" class="btn-secondary">
-                        Watch Demo
-                    </a>
-
+                        <a href="#" class="btn-secondary">
+                            Watch Demo
+                        </a>
+                    </div>
                 </div>
 
+                <div class="product-image">
+                    <img src="Image/a41e229b-f30b-44b6-ac4a-4b4dc7c3d2d9.webp" alt="Enterprise ERP">
+                </div>
             </div>
-
-            <div class="product-image">
-
-                <img src="Image/a41e229b-f30b-44b6-ac4a-4b4dc7c3d2d9.webp" alt="Enterprise ERP">
-
-            </div>
-
         </div>
+    </section>
 
-    </div>
-
-</section>
- 
-<!-- ============================================================
+    <!-- ============================================================
      INTEGRATED MODULES
-============================================================ -->
+    ============================================================ -->
+    <section class="modules">
+        <div class="container">
+            <div class="modules-heading">
+                <h2>Integrated Modules</h2>
+                <p>
+                    Scalable tools designed for precision and operational reliability.
+                </p>
+            </div>
+            <div class="modules-grid">
+                <!-- Sales -->
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h3>Sales</h3>
+                    <p>
+                        Manage orders, quotes and customer relationships efficiently.
+                    </p>
+                    <a href="sales.html">
+                        Learn More
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
 
-<section class="modules">
+                <!-- Purchase -->
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="bi bi-cart3"></i>
+                    </div>
+                    <h3>Purchase</h3>
+                    <p>
+                        Streamline procurement and supplier management.
+                    </p>
+                    <a href="purchase.html">
+                        Learn More
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
 
-    <div class="container">
+                <!-- Inventory -->
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="bi bi-box-seam"></i>
+                    </div>
+                    <h3>Inventory</h3>
+                    <p>
+                        Real-time stock control and warehouse optimization.
+                    </p>
+                    <a href="inventory.html">
+                        Learn More
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
 
-        <div class="modules-heading">
+                <!-- Manufacturing -->
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="bi bi-buildings"></i>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>
+                        Production planning, scheduling and bill of materials.
+                    </p>
+                    <a href="manufacturing.html">
+                        Learn More
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
 
-            <h2>Integrated Modules</h2>
+                <!-- POS -->
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="bi bi-credit-card"></i>
+                    </div>
+                    <h3>POS</h3>
+                    <p>
+                        Point of Sale for retail stores and quick transactions.
+                    </p>
+                    <a href="pos.html">
+                        Learn More
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
 
-            <p>
-                Scalable tools designed for precision and operational reliability.
-            </p>
-
+                <!-- E-Commerce -->
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="bi bi-globe2"></i>
+                    </div>
+                    <h3>E-Commerce</h3>
+                    <p>
+                        Seamless online store integration with PRIME ERP.
+                    </p>
+                    <a href="e-commerce.html">
+                        Learn More
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="modules-grid">
-
-            <!-- Sales -->
-
-            <div class="module-card">
-
-                <div class="module-icon">
-                    <i class="bi bi-graph-up"></i>
+    <!-- ============================================================
+     WHY PRIME
+    ============================================================ -->
+    <section class="why-prime">
+        <div class="container">
+            <div class="why-grid">
+                <!-- Technical Precision -->
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-compass"></i>
+                    </div>
+                    <h3>Technical Precision</h3>
+                    <p>
+                        Engineered for accuracy. Every data point is validated
+                        and synchronized across the system with microsecond
+                        latency.
+                    </p>
                 </div>
 
-                <h3>Sales</h3>
-
-                <p>
-                    Manage orders, quotes and customer relationships efficiently.
-                </p>
-
-                <a href="sales.html">
-                    Learn More
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-
-            </div>
-
-            <!-- Purchase -->
-
-            <div class="module-card">
-
-                <div class="module-icon">
-                    <i class="bi bi-cart3"></i>
+                <!-- Reliability -->
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>Reliability</h3>
+                    <p>
+                        Uptime is the cornerstone of manufacturing.
+                        PRIME provides 99.99% availability for
+                        mission-critical operations.
+                    </p>
                 </div>
 
-                <h3>Purchase</h3>
-
-                <p>
-                    Streamline procurement and supplier management.
-                </p>
-
-                <a href="purchase.html">
-                    Learn More
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-
-            </div>
-
-            <!-- Inventory -->
-
-            <div class="module-card">
-
-                <div class="module-icon">
-                    <i class="bi bi-box-seam"></i>
+                <!-- Industrial Insight -->
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h3>Industrial Insight</h3>
+                    <p>
+                        Beyond reporting. Our AI-driven analytics
+                        provide actionable insights into production
+                        bottlenecks and business performance.
+                    </p>
                 </div>
-
-                <h3>Inventory</h3>
-
-                <p>
-                    Real-time stock control and warehouse optimization.
-                </p>
-
-                <a href="inventory.html">
-                    Learn More
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-
             </div>
-
-            <!-- Manufacturing -->
-
-            <div class="module-card">
-
-                <div class="module-icon">
-                    <i class="bi bi-buildings"></i>
-                </div>
-
-                <h3>Manufacturing</h3>
-
-                <p>
-                    Production planning, scheduling and bill of materials.
-                </p>
-
-                <a href="manufacturing.html">
-                    Learn More
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-
-            </div>
-
-            <!-- POS -->
-
-            <div class="module-card">
-
-                <div class="module-icon">
-                    <i class="bi bi-credit-card"></i>
-                </div>
-
-                <h3>POS</h3>
-
-                <p>
-                    Point of Sale for retail stores and quick transactions.
-                </p>
-
-                <a href="pos.html">
-                    Learn More
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-
-            </div>
-
-            <!-- E-Commerce -->
-
-            <div class="module-card">
-
-                <div class="module-icon">
-                    <i class="bi bi-globe2"></i>
-                </div>
-
-                <h3>E-Commerce</h3>
-
-                <p>
-                    Seamless online store integration with MAQSU ERP.
-                </p>
-
-                <a href="e-commerce.html">
-                    Learn More
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-
-            </div>
-
         </div>
-
-    </div>
-
-</section>
-
-<!-- ============================================================
-     WHY MAQSU
-============================================================ -->
-
-<section class="why-maqsu">
-
-    <div class="container">
-
-        <div class="why-grid">
-
-            <!-- Technical Precision -->
-
-            <div class="why-card">
-
-                <div class="why-icon">
-
-                    <i class="bi bi-compass"></i>
-
-                </div>
-
-                <h3>Technical Precision</h3>
-
-                <p>
-
-                    Engineered for accuracy. Every data point is validated
-                    and synchronized across the system with microsecond
-                    latency.
-
-                </p>
-
-            </div>
-
-            <!-- Reliability -->
-
-            <div class="why-card">
-
-                <div class="why-icon">
-
-                    <i class="bi bi-shield-check"></i>
-
-                </div>
-
-                <h3>Reliability</h3>
-
-                <p>
-
-                    Uptime is the cornerstone of manufacturing.
-                    MAQSU provides 99.99% availability for
-                    mission-critical operations.
-
-                </p>
-
-            </div>
-
-            <!-- Industrial Insight -->
-
-            <div class="why-card">
-
-                <div class="why-icon">
-
-                    <i class="bi bi-graph-up-arrow"></i>
-
-                </div>
-
-                <h3>Industrial Insight</h3>
-
-                <p>
-
-                    Beyond reporting. Our AI-driven analytics
-                    provide actionable insights into production
-                    bottlenecks and business performance.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
+    </section>
 
     <!--=========================================================
         FOOTER
     ==========================================================-->
-
     <footer class="footer">
-
         <div class="container">
-
             <div class="copy">
-
-                &copy; 2026 <strong>MAQSU</strong>, All Rights Reserved
-
+                &copy; 2026 <strong>PRIME</strong>, All Rights Reserved
             </div>
-
             <div class="footer-links">
-
                 <a href="#">Terms of Use</a>
-
                 <a href="#">Privacy Policy</a>
-
                 <a href="#">SLA</a>
-
             </div>
-
         </div>
-
     </footer>
+<script src="./nav-bar.js"></script>
 </body>
-
 </html>
